@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<root>
+	<algorithm>		
+		<agent_size>0.353553</agent_size>
+		<timelimit>2000</timelimit>
+		<precision>0.0000001</precision>
+	</algorithm>
+</root>

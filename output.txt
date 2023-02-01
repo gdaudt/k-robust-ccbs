@@ -1,0 +1,122 @@
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+<agent start_i="0" start_j="0" goal_i="0" goal_j="2"/>
+<agent start_i="0" start_j="2" goal_i="0" goal_j="0"/>
+<agent start_i="9" start_j="5" goal_i="0" goal_j="7"/>
+<agent start_i="2" start_j="8" goal_i="7" goal_j="9"/>
+<agent start_i="4" start_j="3" goal_i="8" goal_j="8"/>
+Initializing root node...
+finding path for agent 0
+start: Node: 0 f: 0 g: 0 i: 0 j: 0 interval: 0,0
+goal: Node: 2 f: 0 g: 0 i: 0 j: 2 interval: 0,0
+Goal found: 
+Path cost: 2 agentID: 0
+Node: 0 f: -1 g: 0 i: 0 j: 0 interval: 0,0
+Node: 1 f: 0 g: 1 i: 0 j: 1 interval: -1,-1
+Node: 2 f: 1 g: 2 i: 0 j: 2 interval: -1,-1
+finding path for agent 1
+start: Node: 2 f: 0 g: 0 i: 0 j: 2 interval: 0,0
+goal: Node: 0 f: 0 g: 0 i: 0 j: 0 interval: 0,0
+Goal found: 
+Path cost: 2 agentID: 1
+Node: 2 f: -1 g: 0 i: 0 j: 2 interval: 0,0
+Node: 1 f: 0 g: 1 i: 0 j: 1 interval: -1,-1
+Node: 0 f: 1 g: 2 i: 0 j: 0 interval: -1,-1
+finding path for agent 2
+start: Node: 95 f: 0 g: 0 i: 9 j: 5 interval: 0,0
+goal: Node: 7 f: 0 g: 0 i: 0 j: 7 interval: 0,0
+Goal found: 
+Path cost: 9.82843 agentID: 2
+Node: 95 f: -1 g: 0 i: 9 j: 5 interval: 0,0
+Node: 85 f: 0 g: 1 i: 8 j: 5 interval: -1,-1
+Node: 75 f: 1 g: 2 i: 7 j: 5 interval: -1,-1
+Node: 65 f: 2 g: 3 i: 6 j: 5 interval: -1,-1
+Node: 56 f: 3.41421 g: 4.41421 i: 5 j: 6 interval: -1,-1
+Node: 47 f: 4.82843 g: 5.82843 i: 4 j: 7 interval: -1,-1
+Node: 37 f: 5.82843 g: 6.82843 i: 3 j: 7 interval: -1,-1
+Node: 27 f: 6.82843 g: 7.82843 i: 2 j: 7 interval: -1,-1
+Node: 17 f: 7.82843 g: 8.82843 i: 1 j: 7 interval: -1,-1
+Node: 7 f: 8.82843 g: 9.82843 i: 0 j: 7 interval: -1,-1
+finding path for agent 3
+start: Node: 28 f: 0 g: 0 i: 2 j: 8 interval: 0,0
+goal: Node: 79 f: 0 g: 0 i: 7 j: 9 interval: 0,0
+Goal found: 
+Path cost: 5.41421 agentID: 3
+Node: 28 f: -1 g: 0 i: 2 j: 8 interval: 0,0
+Node: 38 f: 0 g: 1 i: 3 j: 8 interval: -1,-1
+Node: 49 f: 1.41421 g: 2.41421 i: 4 j: 9 interval: -1,-1
+Node: 59 f: 2.41421 g: 3.41421 i: 5 j: 9 interval: -1,-1
+Node: 69 f: 3.41421 g: 4.41421 i: 6 j: 9 interval: -1,-1
+Node: 79 f: 4.41421 g: 5.41421 i: 7 j: 9 interval: -1,-1
+finding path for agent 4
+start: Node: 43 f: 0 g: 0 i: 4 j: 3 interval: 0,0
+goal: Node: 88 f: 0 g: 0 i: 8 j: 8 interval: 0,0
+Goal found: 
+Path cost: 6.65685 agentID: 4
+Node: 43 f: -1 g: 0 i: 4 j: 3 interval: 0,0
+Node: 44 f: 0 g: 1 i: 4 j: 4 interval: -1,-1
+Node: 55 f: 1.41421 g: 2.41421 i: 5 j: 5 interval: -1,-1
+Node: 66 f: 2.82843 g: 3.82843 i: 6 j: 6 interval: -1,-1
+Node: 77 f: 4.24264 g: 5.24264 i: 7 j: 7 interval: -1,-1
+Node: 88 f: 5.65685 g: 6.65685 i: 8 j: 8 interval: -1,-1
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+dscr < 0, agents will not collide
+Conflict: agent1: 0 agent2: 1 time: 0 overcost: -1
+Move: t1= 0 t2= 1 id1= 0 id2= 1
+Move: t1= 0 t2= 1 id1= 2 id2= 1
+Conflict: agent1: 2 agent2: 4 time: 2.41421 overcost: -1
+Move: t1= 3 t2= 4.41421 id1= 65 id2= 56
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+CBS_Tree: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 56 g: 4.41421
+simpleNode id: 47 g: 5.82843
+simpleNode id: 37 g: 6.82843
+simpleNode id: 27 g: 7.82843
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 49 g: 2.41421
+simpleNode id: 59 g: 3.41421
+simpleNode id: 69 g: 4.41421
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 44 g: 1
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 0 agent2: 1 time: 0 overcost: -1
+Move: t1= 0 t2= 1 id1= 0 id2= 1
+Move: t1= 0 t2= 1 id1= 2 id2= 1
+Conflict: agent1: 2 agent2: 4 time: 2.41421 overcost: -1
+Move: t1= 3 t2= 4.41421 id1= 65 id2= 56
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+closed: 
