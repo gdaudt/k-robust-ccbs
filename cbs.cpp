@@ -208,10 +208,25 @@ Constraint CBS::get_constraint(int agent, Move move1, Move move2){
     return Constraint(agent, startTimeA, move1.t1, move1.id1, move1.id2);
 }
 
+//this function updates the conflicts of the tree node spawned from the current popped tree node
 void CBS::find_new_conflicts(const Map& map, const Task& task, CBS_Node& node, 
-    std::vector<simplePath>& paths, const simplePath path, const std::list<Conflict>& conflicts, int& low_level_searches, int& low_level_expansions){
-    
+                            std::vector<simplePath>& paths, const simplePath path, const std::list<Conflict>& conflicts, 
+                            int& low_level_searches, int& low_level_expansions)
+{
+    paths[path.agentID] = path;
+    auto new_conflicts = get_all_conflicts(paths, path.agentID);    
 
+    std::cout << "new conflicts: " << new_conflicts.size() << std::endl;
+    std::list<Conflict> conflictsA({});
+    for(auto c : new_conflicts){
+        c.print();
+        if(c.agent1 != path.agentID && c.agent2 != path.agentID){
+            conflictsA.push_back(c);
+        }
+    }
+    node.conflicts = conflictsA;    
+    node.conflicts_num = node.conflicts.size();
+    return;
 }
 
 
@@ -314,9 +329,19 @@ Solution CBS::solve(const Map& map, const Task& task, const Config& cfg){
         tree.print();
 
     } while (tree.get_open_size() > 0);
-
-
-
+    solution.paths = get_paths(&node, task.get_agents_size());
+    solution.flowtime = node.cost;
+    solution.low_level_expanded = low_level_expanded;
+    solution.low_level_expansions = low_level_searches;
+    solution.high_level_expanded = expanded;
+    solution.high_level_generated = int(tree.get_open_size());
+    for (auto path : solution.paths)
+        solution.makespan = (path.cost > solution.makespan) ? path.cost : solution.makespan;
+    solution.time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - t);
+    solution.check_time = time;
+    for (auto path : solution.paths)
+        path.print();
+    return solution;
 }
 
 double CBS::get_cost(CBS_Node node, int agent_id){

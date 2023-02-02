@@ -291,6 +291,11 @@ class CBS_Tree{
         int get_open_size(){
             return open_size;
         }
+
+        int get_size(){
+            return tree.size();
+        }
+
         void add_node(CBS_Node node){
             tree.push_back(node);
             open_list.insert(Open_Element(&tree.back(), node.id, node.cost, node.conflicts_num, node.total_constraints));

@@ -51,6 +51,10 @@ class SIPP{
         Path path;       
         
         void print_constraints(){
+            if(constraints.size() == 0){
+                std::cout << "No constraints" << std::endl;
+                return;
+            }
             std::cout << "Constraints: " << std::endl;
             for(auto c:constraints){
                 std::cout << "Key: nodeid1: " << c.first.first << ", nodeid2: " << c.first.second << std::endl;
@@ -61,6 +65,10 @@ class SIPP{
         }
 
         void print_collision_intervals(){
+            if(collision_intervals.size() == 0){
+                std::cout << "No collision intervals" << std::endl;
+                return;
+            }
             std::cout << "Collision Intervals: " << std::endl;
             for(auto c:collision_intervals){
                 std::cout << "Key: " << c.first << std::endl;
@@ -72,6 +80,10 @@ class SIPP{
 
         //copy the open queue to print it
         void print_open(){
+            if(open.empty()){
+                std::cout << "Open is empty" << std::endl;
+                return;
+            }
             auto temp = open;
             while(!temp.empty()){
                 Node n = temp.top();
