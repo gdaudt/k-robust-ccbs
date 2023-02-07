@@ -67,8 +67,11 @@ std::vector<Conflict> CBS::get_all_conflicts(const std::vector<simplePath>& path
             if(int (i) == id)
                 continue;
             auto conflict = check_paths(paths[i], paths[id]);
-            if(conflict.agent1 >= 0)
+            if(conflict.agent1 >= 0){
                 conflicts.push_back(conflict);            
+                std::cout << "check_paths conflict with agent " << i << " and agent " << id << " is " << conflict.agent1 << " and " << conflict.agent2 << std::endl;
+                conflict.print();
+            }
         }
     }
     return conflicts;
@@ -216,16 +219,13 @@ void CBS::find_new_conflicts(const Map& map, const Task& task, CBS_Node& node,
     paths[path.agentID] = path;
     auto new_conflicts = get_all_conflicts(paths, path.agentID);    
 
-    std::cout << "new conflicts: " << new_conflicts.size() << std::endl;
+    std::cout << "FINDING NEW CONFLICTS FOR AGENT " << path.agentID << std::endl;
     std::list<Conflict> conflictsA({});
-    for(auto c : new_conflicts){
-        c.print();
-        if(c.agent1 != path.agentID && c.agent2 != path.agentID){
-            conflictsA.push_back(c);
-        }
-    }
-    node.conflicts = conflictsA;    
+    node.conflicts = conflictsA;
+    for(auto n:new_conflicts)
+        node.conflicts.push_back(n);
     node.conflicts_num = node.conflicts.size();
+    std::cout << "new conflicts on node: " << node.conflicts.size() << std::endl;
     return;
 }
 
@@ -365,5 +365,9 @@ std::vector<simplePath> CBS::get_paths(CBS_Node* node, unsigned int agents_size)
         if(paths.at(i).cost < 0)
             paths.at(i) = current->paths.at(i);
     }
+    // std::cout << "paths returned: " << std::endl;
+    // for(auto p : paths){
+    //     p.print();
+    // }
     return paths;
 }

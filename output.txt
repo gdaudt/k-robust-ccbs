@@ -10,6 +10,9 @@
 0 0 0 0 0 0 0 0 0 0 
 <agent start_i="0" start_j="0" goal_i="0" goal_j="2"/>
 <agent start_i="0" start_j="2" goal_i="0" goal_j="0"/>
+<agent start_i="9" start_j="5" goal_i="0" goal_j="7"/>
+<agent start_i="2" start_j="8" goal_i="7" goal_j="9"/>
+<agent start_i="4" start_j="3" goal_i="8" goal_j="8"/>
 solving
 Initializing root node...
 finding path for agent 0
@@ -18,3 +21,1202 @@ goal: Node: 2 f: 0 g: 0 i: 0 j: 2 interval: 0,0
 No constraints
 min node:
 Node: 0 f: 2 g: 0 i: 0 j: 0 interval: 0,0
+parent: 
+Node: 0 f: 2 g: 0 i: 0 j: 0 interval: 0,0
+min node:
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+parent: 
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+min node:
+Node: 2 f: 2 g: 2 i: 0 j: 2 interval: 0,1e+08
+parent: 
+Node: 2 f: 2 g: 2 i: 0 j: 2 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 0----------
+Path cost: 2 agentID: 0
+Node: 0 f: 2 g: 0 i: 0 j: 0 interval: 0,0
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+Node: 2 f: 2 g: 2 i: 0 j: 2 interval: 0,1e+08
+finding path for agent 1
+start: Node: 2 f: 0 g: 0 i: 0 j: 2 interval: 0,0
+goal: Node: 0 f: 0 g: 0 i: 0 j: 0 interval: 0,0
+No constraints
+min node:
+Node: 2 f: 2 g: 0 i: 0 j: 2 interval: 0,0
+parent: 
+Node: 2 f: 2 g: 0 i: 0 j: 2 interval: 0,0
+min node:
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+parent: 
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+min node:
+Node: 0 f: 2 g: 2 i: 0 j: 0 interval: 0,1e+08
+parent: 
+Node: 0 f: 2 g: 2 i: 0 j: 0 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 1----------
+Path cost: 2 agentID: 1
+Node: 2 f: 2 g: 0 i: 0 j: 2 interval: 0,0
+Node: 1 f: 2 g: 1 i: 0 j: 1 interval: 0,1e+08
+Node: 0 f: 2 g: 2 i: 0 j: 0 interval: 0,1e+08
+finding path for agent 2
+start: Node: 95 f: 0 g: 0 i: 9 j: 5 interval: 0,0
+goal: Node: 7 f: 0 g: 0 i: 0 j: 7 interval: 0,0
+No constraints
+min node:
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+parent: 
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+min node:
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+parent: 
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+min node:
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+parent: 
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+min node:
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 65 f: 9.82843 g: 3 i: 6 j: 5 interval: 0,1e+08
+parent: 
+Node: 65 f: 9.82843 g: 3 i: 6 j: 5 interval: 0,1e+08
+min node:
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+parent: 
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+min node:
+Node: 55 f: 9.82843 g: 4 i: 5 j: 5 interval: 0,1e+08
+parent: 
+Node: 55 f: 9.82843 g: 4 i: 5 j: 5 interval: 0,1e+08
+min node:
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+parent: 
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+min node:
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+parent: 
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+min node:
+Node: 45 f: 9.82843 g: 5 i: 4 j: 5 interval: 0,1e+08
+parent: 
+Node: 45 f: 9.82843 g: 5 i: 4 j: 5 interval: 0,1e+08
+min node:
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+parent: 
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+min node:
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+parent: 
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+min node:
+Node: 35 f: 9.82843 g: 6 i: 3 j: 5 interval: 0,1e+08
+parent: 
+Node: 35 f: 9.82843 g: 6 i: 3 j: 5 interval: 0,1e+08
+min node:
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+parent: 
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+min node:
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+parent: 
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+min node:
+Node: 25 f: 9.82843 g: 7 i: 2 j: 5 interval: 0,1e+08
+parent: 
+Node: 25 f: 9.82843 g: 7 i: 2 j: 5 interval: 0,1e+08
+min node:
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+parent: 
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+min node:
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+parent: 
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+min node:
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+parent: 
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+min node:
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+parent: 
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 2----------
+Path cost: 9.82843 agentID: 2
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+Node: 65 f: 9.82843 g: 3 i: 6 j: 5 interval: 0,1e+08
+Node: 55 f: 9.82843 g: 4 i: 5 j: 5 interval: 0,1e+08
+Node: 45 f: 9.82843 g: 5 i: 4 j: 5 interval: 0,1e+08
+Node: 35 f: 9.82843 g: 6 i: 3 j: 5 interval: 0,1e+08
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+finding path for agent 3
+start: Node: 28 f: 0 g: 0 i: 2 j: 8 interval: 0,0
+goal: Node: 79 f: 0 g: 0 i: 7 j: 9 interval: 0,0
+No constraints
+min node:
+Node: 28 f: 5.41421 g: 0 i: 2 j: 8 interval: 0,0
+parent: 
+Node: 28 f: 5.41421 g: 0 i: 2 j: 8 interval: 0,0
+min node:
+Node: 38 f: 5.41421 g: 1 i: 3 j: 8 interval: 0,1e+08
+parent: 
+Node: 38 f: 5.41421 g: 1 i: 3 j: 8 interval: 0,1e+08
+min node:
+Node: 39 f: 5.41421 g: 1.41421 i: 3 j: 9 interval: 0,1e+08
+parent: 
+Node: 39 f: 5.41421 g: 1.41421 i: 3 j: 9 interval: 0,1e+08
+min node:
+Node: 48 f: 5.41421 g: 2 i: 4 j: 8 interval: 0,1e+08
+parent: 
+Node: 48 f: 5.41421 g: 2 i: 4 j: 8 interval: 0,1e+08
+min node:
+Node: 49 f: 5.41421 g: 2.41421 i: 4 j: 9 interval: 0,1e+08
+parent: 
+Node: 49 f: 5.41421 g: 2.41421 i: 4 j: 9 interval: 0,1e+08
+min node:
+Node: 58 f: 5.41421 g: 3 i: 5 j: 8 interval: 0,1e+08
+parent: 
+Node: 58 f: 5.41421 g: 3 i: 5 j: 8 interval: 0,1e+08
+min node:
+Node: 59 f: 5.41421 g: 3.41421 i: 5 j: 9 interval: 0,1e+08
+parent: 
+Node: 59 f: 5.41421 g: 3.41421 i: 5 j: 9 interval: 0,1e+08
+min node:
+Node: 68 f: 5.41421 g: 4 i: 6 j: 8 interval: 0,1e+08
+parent: 
+Node: 68 f: 5.41421 g: 4 i: 6 j: 8 interval: 0,1e+08
+min node:
+Node: 69 f: 5.41421 g: 4.41421 i: 6 j: 9 interval: 0,1e+08
+parent: 
+Node: 69 f: 5.41421 g: 4.41421 i: 6 j: 9 interval: 0,1e+08
+min node:
+Node: 79 f: 5.41421 g: 5.41421 i: 7 j: 9 interval: 0,1e+08
+parent: 
+Node: 79 f: 5.41421 g: 5.41421 i: 7 j: 9 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 3----------
+Path cost: 5.41421 agentID: 3
+Node: 28 f: 5.41421 g: 0 i: 2 j: 8 interval: 0,0
+Node: 38 f: 5.41421 g: 1 i: 3 j: 8 interval: 0,1e+08
+Node: 48 f: 5.41421 g: 2 i: 4 j: 8 interval: 0,1e+08
+Node: 58 f: 5.41421 g: 3 i: 5 j: 8 interval: 0,1e+08
+Node: 68 f: 5.41421 g: 4 i: 6 j: 8 interval: 0,1e+08
+Node: 79 f: 5.41421 g: 5.41421 i: 7 j: 9 interval: 0,1e+08
+finding path for agent 4
+start: Node: 43 f: 0 g: 0 i: 4 j: 3 interval: 0,0
+goal: Node: 88 f: 0 g: 0 i: 8 j: 8 interval: 0,0
+No constraints
+min node:
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+parent: 
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+min node:
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+parent: 
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+min node:
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+parent: 
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+min node:
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+parent: 
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+min node:
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+parent: 
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+min node:
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 76 f: 6.65685 g: 4.24264 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 6.65685 g: 4.24264 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+parent: 
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+min node:
+Node: 87 f: 6.65685 g: 5.65685 i: 8 j: 7 interval: 0,1e+08
+parent: 
+Node: 87 f: 6.65685 g: 5.65685 i: 8 j: 7 interval: 0,1e+08
+min node:
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+parent: 
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 4----------
+Path cost: 6.65685 agentID: 4
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+Conflict: agent1: 0 agent2: 1 time: 0 overcost: -1
+Move: t1= 0 t2= 1 id1= 0 id2= 1
+Move: t1= 0 t2= 1 id1= 2 id2= 1
+Conflict: agent1: 2 agent2: 4 time: 1.41421 overcost: -1
+Move: t1= 2 t2= 3 id1= 75 id2= 65
+Move: t1= 1.41421 t2= 2.82843 id1= 54 id2= 65
+CBS_Tree: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 55 g: 4
+simpleNode id: 45 g: 5
+simpleNode id: 35 g: 6
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 0 agent2: 1 time: 0 overcost: -1
+Move: t1= 0 t2= 1 id1= 0 id2= 1
+Move: t1= 0 t2= 1 id1= 2 id2= 1
+Conflict: agent1: 2 agent2: 4 time: 1.41421 overcost: -1
+Move: t1= 2 t2= 3 id1= 75 id2= 65
+Move: t1= 1.41421 t2= 2.82843 id1= 54 id2= 65
+closed: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 55 g: 4
+simpleNode id: 45 g: 5
+simpleNode id: 35 g: 6
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 0 agent2: 1 time: 0 overcost: -1
+Move: t1= 0 t2= 1 id1= 0 id2= 1
+Move: t1= 0 t2= 1 id1= 2 id2= 1
+Conflict: agent1: 2 agent2: 4 time: 1.41421 overcost: -1
+Move: t1= 2 t2= 3 id1= 75 id2= 65
+Move: t1= 1.41421 t2= 2.82843 id1= 54 id2= 65
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 95 f: 0 g: 0 i: 9 j: 5 interval: 0,0
+goal: Node: 7 f: 0 g: 0 i: 0 j: 7 interval: 0,0
+Constraints: 
+Key: nodeid1: 75, nodeid2: 65
+Move: t1= 2 t2= 2.5356 id1= 75 id2= 65
+min node:
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+parent: 
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+min node:
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+parent: 
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+min node:
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+parent: 
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+min node:
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+parent: 
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+min node:
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+parent: 
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+min node:
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+parent: 
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+min node:
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+parent: 
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+min node:
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+parent: 
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+min node:
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+parent: 
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+min node:
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+parent: 
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+min node:
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+parent: 
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+min node:
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+parent: 
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+min node:
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+parent: 
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+min node:
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+parent: 
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 2----------
+Path cost: 9.82843 agentID: 2
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 43 f: 0 g: 0 i: 4 j: 3 interval: 0,0
+goal: Node: 88 f: 0 g: 0 i: 8 j: 8 interval: 0,0
+Constraints: 
+Key: nodeid1: 54, nodeid2: 65
+Move: t1= 1.41421 t2= 2.29294 id1= 54 id2= 65
+min node:
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+parent: 
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+min node:
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+parent: 
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+min node:
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+parent: 
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+min node:
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+parent: 
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+min node:
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+parent: 
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+min node:
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+parent: 
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 4----------
+Path cost: 6.65685 agentID: 4
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+ctime > 0, agents will collide
+check_paths conflict with agent 4 and agent 2 is 4 and 2
+Conflict: agent1: 4 agent2: 2 time: 2 overcost: -1
+Move: t1= 2.82843 t2= 3.82843 id1= 65 id2= 66
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+FINDING NEW CONFLICTS FOR AGENT 2
+new conflicts on node: 1
+ctime > 0, agents will collide
+check_paths conflict with agent 2 and agent 4 is 2 and 4
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+FINDING NEW CONFLICTS FOR AGENT 4
+new conflicts on node: 1
+CBS_Tree: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 55 g: 4
+simpleNode id: 45 g: 5
+simpleNode id: 35 g: 6
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+CBS_Node: id= 2 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+Conflict: agent1: 4 agent2: 2 time: 2 overcost: -1
+Move: t1= 2.82843 t2= 3.82843 id1= 65 id2= 66
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+CBS_Node: id= 3 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+closed: 
+1 CBS_Node: id= 2 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+Conflict: agent1: 4 agent2: 2 time: 2 overcost: -1
+Move: t1= 2.82843 t2= 3.82843 id1= 65 id2= 66
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+ctime > 0, agents will collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 43 f: 0 g: 0 i: 4 j: 3 interval: 0,0
+goal: Node: 88 f: 0 g: 0 i: 8 j: 8 interval: 0,0
+Constraints: 
+Key: nodeid1: 65, nodeid2: 66
+Move: t1= 2.82843 t2= 3.12139 id1= 65 id2= 66
+min node:
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+parent: 
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+min node:
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+parent: 
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+min node:
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+parent: 
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+min node:
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+parent: 
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+min node:
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+parent: 
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+min node:
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+parent: 
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+min node:
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+parent: 
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 4----------
+Path cost: 6.65685 agentID: 4
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 95 f: 0 g: 0 i: 9 j: 5 interval: 0,0
+goal: Node: 7 f: 0 g: 0 i: 0 j: 7 interval: 0,0
+Constraints: 
+Key: nodeid1: 75, nodeid2: 65
+Move: t1= 2 t2= 2.5356 id1= 75 id2= 65
+Key: nodeid1: 75, nodeid2: 66
+Move: t1= 2 t2= 3.12134 id1= 75 id2= 66
+min node:
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+parent: 
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+min node:
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+parent: 
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+min node:
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+parent: 
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+min node:
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+parent: 
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+min node:
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+parent: 
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+min node:
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+parent: 
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+min node:
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+parent: 
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+min node:
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+parent: 
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+min node:
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+parent: 
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+min node:
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+parent: 
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+min node:
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+parent: 
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+min node:
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+parent: 
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+min node:
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+parent: 
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+min node:
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+parent: 
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 2----------
+Path cost: 9.82843 agentID: 2
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+Node: 66 f: 9.82843 g: 3.41421 i: 6 j: 6 interval: 0,1e+08
+Node: 56 f: 9.82843 g: 4.41421 i: 5 j: 6 interval: 0,1e+08
+Node: 46 f: 9.82843 g: 5.41421 i: 4 j: 6 interval: 0,1e+08
+Node: 36 f: 9.82843 g: 6.41421 i: 3 j: 6 interval: 0,1e+08
+Node: 26 f: 9.82843 g: 7.41421 i: 2 j: 6 interval: 0,1e+08
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+ctime > 0, agents will collide
+check_paths conflict with agent 2 and agent 4 is 2 and 4
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+FINDING NEW CONFLICTS FOR AGENT 4
+new conflicts on node: 1
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+ctime > 0, agents will collide
+check_paths conflict with agent 4 and agent 2 is 4 and 2
+Conflict: agent1: 4 agent2: 2 time: 2.41421 overcost: -1
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+Move: t1= 2.41421 t2= 3.41421 id1= 76 id2= 66
+FINDING NEW CONFLICTS FOR AGENT 2
+new conflicts on node: 1
+CBS_Tree: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 55 g: 4
+simpleNode id: 45 g: 5
+simpleNode id: 35 g: 6
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+CBS_Node: id= 2 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+CBS_Node: id= 3 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+CBS_Node: id= 4 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 2 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+CBS_Node: id= 5 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 2 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+Conflict: agent1: 4 agent2: 2 time: 2.41421 overcost: -1
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+Move: t1= 2.41421 t2= 3.41421 id1= 76 id2= 66
+closed: 
+1 2 CBS_Node: id= 5 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 2 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+Conflict: agent1: 4 agent2: 2 time: 2.41421 overcost: -1
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+Move: t1= 2.41421 t2= 3.41421 id1= 76 id2= 66
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 43 f: 0 g: 0 i: 4 j: 3 interval: 0,0
+goal: Node: 88 f: 0 g: 0 i: 8 j: 8 interval: 0,0
+Constraints: 
+Key: nodeid1: 55, nodeid2: 66
+Move: t1= 2.41421 t2= 2.70712 id1= 55 id2= 66
+min node:
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+parent: 
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+min node:
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+parent: 
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+min node:
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+parent: 
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+min node:
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+parent: 
+Node: 44 f: 6.65685 g: 1 i: 4 j: 4 interval: 0,1e+08
+min node:
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+parent: 
+Node: 55 f: 6.65685 g: 2.41421 i: 5 j: 5 interval: 0,1e+08
+min node:
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+parent: 
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+min node:
+Node: 76 f: 6.65685 g: 4.24264 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 6.65685 g: 4.24264 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+parent: 
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+min node:
+Node: 87 f: 6.65685 g: 5.65685 i: 8 j: 7 interval: 0,1e+08
+parent: 
+Node: 87 f: 6.65685 g: 5.65685 i: 8 j: 7 interval: 0,1e+08
+min node:
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+parent: 
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 4----------
+Path cost: 6.65685 agentID: 4
+Node: 43 f: 6.65685 g: 0 i: 4 j: 3 interval: 0,0
+Node: 54 f: 6.65685 g: 1.41421 i: 5 j: 4 interval: 0,1e+08
+Node: 65 f: 6.65685 g: 2.82843 i: 6 j: 5 interval: 0,1e+08
+Node: 66 f: 6.65685 g: 3.82843 i: 6 j: 6 interval: 0,1e+08
+Node: 77 f: 6.65685 g: 5.24264 i: 7 j: 7 interval: 0,1e+08
+Node: 88 f: 6.65685 g: 6.65685 i: 8 j: 8 interval: 0,1e+08
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+ctime > 0, agents will collide
+start: Node: 95 f: 0 g: 0 i: 9 j: 5 interval: 0,0
+goal: Node: 7 f: 0 g: 0 i: 0 j: 7 interval: 0,0
+Constraints: 
+Key: nodeid1: 75, nodeid2: 65
+Move: t1= 2 t2= 2.5356 id1= 75 id2= 65
+Key: nodeid1: 75, nodeid2: 66
+Move: t1= 2 t2= 3.12134 id1= 75 id2= 66
+Key: nodeid1: 76, nodeid2: 66
+Move: t1= 2.41421 t2= 3.53555 id1= 76 id2= 66
+min node:
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+parent: 
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+min node:
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+parent: 
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+min node:
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+parent: 
+Node: 75 f: 9.82843 g: 2 i: 7 j: 5 interval: 0,1e+08
+min node:
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+parent: 
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+min node:
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+parent: 
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+min node:
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+parent: 
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+min node:
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+parent: 
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+min node:
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+parent: 
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+min node:
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+parent: 
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+min node:
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+parent: 
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+min node:
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+parent: 
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+----------GOAL FOUND FOR AGENT 2----------
+Path cost: 9.82843 agentID: 2
+Node: 95 f: 9.82843 g: 0 i: 9 j: 5 interval: 0,0
+Node: 85 f: 9.82843 g: 1 i: 8 j: 5 interval: 0,1e+08
+Node: 76 f: 9.82843 g: 2.41421 i: 7 j: 6 interval: 0,1e+08
+Node: 67 f: 9.82843 g: 3.82843 i: 6 j: 7 interval: 0,1e+08
+Node: 57 f: 9.82843 g: 4.82843 i: 5 j: 7 interval: 0,1e+08
+Node: 47 f: 9.82843 g: 5.82843 i: 4 j: 7 interval: 0,1e+08
+Node: 37 f: 9.82843 g: 6.82843 i: 3 j: 7 interval: 0,1e+08
+Node: 27 f: 9.82843 g: 7.82843 i: 2 j: 7 interval: 0,1e+08
+Node: 17 f: 9.82843 g: 8.82843 i: 1 j: 7 interval: 0,1e+08
+Node: 7 f: 9.82843 g: 9.82843 i: 0 j: 7 interval: 0,1e+08
+dscr < 0, agents will not collide
+ctime > 0, agents will collide
+check_paths conflict with agent 2 and agent 4 is 2 and 4
+Conflict: agent1: 2 agent2: 4 time: 2.41421 overcost: -1
+Move: t1= 2.41421 t2= 3.41421 id1= 76 id2= 66
+Move: t1= 2.82843 t2= 3.82843 id1= 65 id2= 66
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+FINDING NEW CONFLICTS FOR AGENT 4
+new conflicts on node: 1
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+dscr < 0, agents will not collide
+FINDING NEW CONFLICTS FOR AGENT 2
+new conflicts on node: 0
+CBS_Tree: 
+CBS_Node: id= 1 cost= 25.8995 h= 0 conflicts_num= 2 total_constraints= 0 low_level_expanded= 0
+paths: 
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 65 g: 3
+simpleNode id: 55 g: 4
+simpleNode id: 45 g: 5
+simpleNode id: 35 g: 6
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+CBS_Node: id= 2 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 75 g: 2
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+CBS_Node: id= 3 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 1 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+CBS_Node: id= 4 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 2 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 55 g: 2.41421
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2 overcost: -1
+Move: t1= 2 t2= 3.41421 id1= 75 id2= 66
+Move: t1= 2.41421 t2= 3.82843 id1= 55 id2= 66
+CBS_Node: id= 5 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 2 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 66 g: 3.41421
+simpleNode id: 56 g: 4.41421
+simpleNode id: 46 g: 5.41421
+simpleNode id: 36 g: 6.41421
+simpleNode id: 26 g: 7.41421
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+CBS_Node: id= 6 cost= 25.8995 h= 0 conflicts_num= 1 total_constraints= 3 low_level_expanded= 0
+paths: 
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+conflicts: 
+Conflict: agent1: 2 agent2: 4 time: 2.41421 overcost: -1
+Move: t1= 2.41421 t2= 3.41421 id1= 76 id2= 66
+Move: t1= 2.82843 t2= 3.82843 id1= 65 id2= 66
+CBS_Node: id= 7 cost= 25.8995 h= 0 conflicts_num= 0 total_constraints= 3 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 67 g: 3.82843
+simpleNode id: 57 g: 4.82843
+simpleNode id: 47 g: 5.82843
+simpleNode id: 37 g: 6.82843
+simpleNode id: 27 g: 7.82843
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+closed: 
+1 2 5 CBS_Node: id= 7 cost= 25.8995 h= 0 conflicts_num= 0 total_constraints= 3 low_level_expanded= 0
+paths: 
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 67 g: 3.82843
+simpleNode id: 57 g: 4.82843
+simpleNode id: 47 g: 5.82843
+simpleNode id: 37 g: 6.82843
+simpleNode id: 27 g: 7.82843
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+conflicts: 
+solution found
+simplePath cost: 2 agentID: 0
+simpleNode id: 0 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 2 g: 2
+simplePath cost: 2 agentID: 1
+simpleNode id: 2 g: 0
+simpleNode id: 1 g: 1
+simpleNode id: 0 g: 2
+simplePath cost: 9.82843 agentID: 2
+simpleNode id: 95 g: 0
+simpleNode id: 85 g: 1
+simpleNode id: 76 g: 2.41421
+simpleNode id: 67 g: 3.82843
+simpleNode id: 57 g: 4.82843
+simpleNode id: 47 g: 5.82843
+simpleNode id: 37 g: 6.82843
+simpleNode id: 27 g: 7.82843
+simpleNode id: 17 g: 8.82843
+simpleNode id: 7 g: 9.82843
+simplePath cost: 5.41421 agentID: 3
+simpleNode id: 28 g: 0
+simpleNode id: 38 g: 1
+simpleNode id: 48 g: 2
+simpleNode id: 58 g: 3
+simpleNode id: 68 g: 4
+simpleNode id: 79 g: 5.41421
+simplePath cost: 6.65685 agentID: 4
+simpleNode id: 43 g: 0
+simpleNode id: 54 g: 1.41421
+simpleNode id: 65 g: 2.82843
+simpleNode id: 66 g: 3.82843
+simpleNode id: 77 g: 5.24264
+simpleNode id: 88 g: 6.65685
+Flowtime: 25.8995
+Makespan: 9.82843
+Constraints: 0
+Max Constraints: 0
+Init Cost: 25.8995
+High Level Expanded: 4
+High Level Generated: 3
+Low Level Expanded: 68
+Low Level Expansions: 6
+Check Time: 0.000194342
+Init Time: 0.00170577
+Total Time: 0.00556176

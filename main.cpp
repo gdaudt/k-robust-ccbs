@@ -16,7 +16,11 @@ int main(int argc, const char *argv[])
     Task task;
     task.get_task(argv[2]);
     task.make_ids(map.get_width());
-    task.print_task(); 
+    task.print_task();
+    Config config = Config();
+    if(argc > 2){        
+        config.get_config(argv[3]);
+    }    
     // Heuristic h;
     // auto agents = task.get_agents();    
     // h.init(map.get_size(), agents.size());
@@ -33,6 +37,7 @@ int main(int argc, const char *argv[])
     //  //   path.print();
     // }
     CBS cbs;
-    cbs.solve(map, task, Config());
+    auto s = cbs.solve(map, task, Config());
+    s.print();
     return 0;
 }

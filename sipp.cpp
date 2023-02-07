@@ -25,29 +25,29 @@ void SIPP::find_successors(Node current, const Map& map, std::vector<Node>& succ
         successor.j = move.j;
         double cost = distance(current, successor);
         successor.g = current.g + cost;
-        successor.f = successor.g + h_values.get_value(successor.id, agent.id);
+        // successor.f = successor.g + h_values.get_value(successor.id, agent.id);
         std::vector<std::pair<double, double>> intervals(0);
         auto colls_it = collision_intervals.find(successor.id);
-        std::cout << "collision intervals for successor " << successor.id << std::endl;
+        // std::cout << "collision intervals for successor " << successor.id << std::endl;
         if(colls_it != collision_intervals.end()){
             std::pair<double, double> interval = {0, CN_INFINITY};
             //iterates through all the collision intervals for the successor node
             for(unsigned int i = 0; i < colls_it->second.size(); i++){
-                std::cout << "interval: " << interval.first << ", " << interval.second << std::endl;
+                // std::cout << "interval: " << interval.first << ", " << interval.second << std::endl;
                 //add each of the intervals to the colls_it vector
                 interval.second = colls_it->second[i].first;
                 intervals.push_back(interval);
-                std::cout << "pushing back interval: " << interval.first << ", " << interval.second << std::endl;
+                // std::cout << "pushing back interval: " << interval.first << ", " << interval.second << std::endl;
                 interval.first = colls_it->second[i].second;
-                std::cout << "interval with first = colls_it[i].second: " << interval.first << ", " << interval.second << std::endl;
+                // std::cout << "interval with first = colls_it[i].second: " << interval.first << ", " << interval.second << std::endl;
             }
             interval.second = CN_INFINITY;
             intervals.push_back(interval);
-            std::cout << "last interval: " << interval.first << ", " << interval.second << std::endl;
+            // std::cout << "last interval: " << interval.first << ", " << interval.second << std::endl;
         }
         else{
             intervals.push_back({0, CN_INFINITY});
-            std::cout << "none, adding whole time" << std::endl;
+            // std::cout << "none, adding whole time" << std::endl;
         }
         //iterates through all the intervals
         //gets the constraints for the current node
@@ -55,26 +55,26 @@ void SIPP::find_successors(Node current, const Map& map, std::vector<Node>& succ
         int id(0);
         for(auto interval:intervals){
             successor.interval_id = id;
-            std::cout << "interval id: " << id << std::endl;
+            // std::cout << "interval id: " << id << std::endl;
             id++;
             //checks if the node has been visited 
-            std::cout << "key value: " << successor.id + successor.interval_id * map.get_size() << std::endl;
+            // std::cout << "key value: " << successor.id + successor.interval_id * map.get_size() << std::endl;
             auto visited_it = visited.find(successor.id + successor.interval_id * map.get_size());
             if(visited_it != visited.end())
                 if(visited_it->second.second){
-                    std::cout << "node has been visited" << std::endl;
+                    // std::cout << "node has been visited" << std::endl;
                     continue;
                 }
             //checks if the interval end time is less than the successors.g
             if(interval.second < successor.g){
-                std::cout << "interval end time is less than successor.g" << std::endl;
+                // std::cout << "interval end time is less than successor.g" << std::endl;
                 continue;
             }
             //if the new g value is better, updates the g value, because it means that the successor arrives earlier to the node than the previous one
             if(interval.second < successor.g){
-                std::cout << "successor.g = " << successor.g << "interval.first = " << interval.first << std::endl;
+                // std::cout << "successor.g = " << successor.g << "interval.first = " << interval.first << std::endl;
                 successor.g = interval.first;
-                std::cout << "successor.g = interval.first" << std::endl;
+                // std::cout << "successor.g = interval.first" << std::endl;
             }
             // if the constraints already exist between the current node and the new node, checks if the new g value is in the interval
             if(cons_it != constraints.end()){
@@ -106,9 +106,9 @@ void SIPP::find_successors(Node current, const Map& map, std::vector<Node>& succ
                 visited.insert({successor.id + successor.interval_id * map.get_size(), {successor.g, false}});
             }
             //since not working with landmarks, just get the h value previously computed
-            current.f = successor.g + h_values.get_value(successor.id, agent.id);
-            std::cout << "pushing successor: ";
-            successor.print();
+            successor.f = successor.g + h_values.get_value(successor.id, agent.id);
+            // std::cout << "pushing successor: ";
+            // successor.print();
             successors.push_back(successor);            
         }
 
@@ -213,7 +213,7 @@ void SIPP::add_move_constraint(Move move){
 
 Path SIPP::findPath(Agent agent, const Map& map, std::list<Constraint> constraints, Heuristic& h_values){
     this->clear();
-    this->agent = agent;
+    this->agent = agent;    
     make_constraints(constraints);
     Node start = Node(agent.start_id, 0, 0, agent.start_i, agent.start_j, nullptr, 0, 0); 
     Node goal = Node(agent.goal_id, 0, 0, agent.goal_i, agent.goal_j, nullptr, 0, 0);
@@ -222,7 +222,9 @@ Path SIPP::findPath(Agent agent, const Map& map, std::list<Constraint> constrain
     std::cout << "goal: ";
     goal.print();
     start.f = start.g + h_values.get_value(start.id, agent.id);
+    start.parent = nullptr;
     open.push(start);
+    visited.insert({start.id + start.interval_id * map.get_size(), {start.g, false}});
     Node current;
     std::vector<Node> successors;
     Path result;
@@ -249,7 +251,7 @@ Path SIPP::findPath(Agent agent, const Map& map, std::list<Constraint> constrain
             result.expanded = int(closed.size());
             result.nodes.shrink_to_fit();
             result.agentID = agent.id;
-            std::cout << "Goal found: " << std::endl;
+            std::cout << "----------GOAL FOUND FOR AGENT " << agent.id << "----------" << std::endl;
             result.print();
             return result;
         }

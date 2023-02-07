@@ -6,6 +6,44 @@
 
 #IncludeRegexTransform: 
 
+/home/gdaudt/Devel/k-robust-ccbs/cbs.cpp
+cbs.h
+/home/gdaudt/Devel/k-robust-ccbs/cbs.h
+
+/home/gdaudt/Devel/k-robust-ccbs/cbs.h
+chrono
+-
+structs.h
+/home/gdaudt/Devel/k-robust-ccbs/structs.h
+map.h
+/home/gdaudt/Devel/k-robust-ccbs/map.h
+task.h
+/home/gdaudt/Devel/k-robust-ccbs/task.h
+heuristic.h
+/home/gdaudt/Devel/k-robust-ccbs/heuristic.h
+config.h
+/home/gdaudt/Devel/k-robust-ccbs/config.h
+sipp.h
+/home/gdaudt/Devel/k-robust-ccbs/sipp.h
+
+/home/gdaudt/Devel/k-robust-ccbs/config.cpp
+config.h
+/home/gdaudt/Devel/k-robust-ccbs/config.h
+
+/home/gdaudt/Devel/k-robust-ccbs/config.h
+tinyxml2.h
+/home/gdaudt/Devel/k-robust-ccbs/tinyxml2.h
+const.h
+/home/gdaudt/Devel/k-robust-ccbs/const.h
+string
+-
+iostream
+-
+sstream
+-
+math.h
+-
+
 /home/gdaudt/Devel/k-robust-ccbs/const.h
 
 /home/gdaudt/Devel/k-robust-ccbs/heuristic.h
@@ -37,10 +75,6 @@ const.h
 /home/gdaudt/Devel/k-robust-ccbs/const.h
 structs.h
 /home/gdaudt/Devel/k-robust-ccbs/structs.h
-
-/home/gdaudt/Devel/k-robust-ccbs/sipp.cpp
-sipp.h
-/home/gdaudt/Devel/k-robust-ccbs/sipp.h
 
 /home/gdaudt/Devel/k-robust-ccbs/sipp.h
 structs.h
@@ -81,6 +115,26 @@ boost/multi_index/member.hpp
 -
 boost/multi_index/composite_key.hpp
 -
+
+/home/gdaudt/Devel/k-robust-ccbs/task.h
+tinyxml2.h
+/home/gdaudt/Devel/k-robust-ccbs/tinyxml2.h
+iostream
+-
+string
+-
+sstream
+-
+vector
+-
+tinyxml.h
+/home/gdaudt/Devel/k-robust-ccbs/tinyxml.h
+const.h
+/home/gdaudt/Devel/k-robust-ccbs/const.h
+structs.h
+/home/gdaudt/Devel/k-robust-ccbs/structs.h
+map.h
+/home/gdaudt/Devel/k-robust-ccbs/map.h
 
 /home/gdaudt/Devel/k-robust-ccbs/tinyxml2.h
 ctype.h

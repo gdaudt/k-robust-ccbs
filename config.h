@@ -11,8 +11,10 @@ class Config
 public:
     Config();
     void get_config(const char* fileName);
-    double  precision;
-    double  agent_size;
-    double  timelimit;
+    double precision;
+    double agent_size;
+    double timelimit;
+    double connectedness;
+    double k_robustness;
 };
 

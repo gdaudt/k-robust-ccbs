@@ -4,6 +4,11 @@
 #define CN_INFINITY 1e+8
 #define CN_AGENT_SIZE sqrt(2.0)/4.0 //radius; only values in range (0; 0.5] are supported
 #define CN_OBSTL 1
+#define CN_PRECISION 0.0001
+#define CN_ROBUSTNESS 3
+#define CN_TIMELIMIT 60
+#define CN_CONNECTEDNESS 3
+
 //XML file tags
 #define CNS_TAG_ROOT                "root"
     #define CNS_TAG_ALGORITHM       "algorithm"
