@@ -22,6 +22,7 @@ bool CBS::init_root(const Task& task, const Map& map)
     auto conflicts = get_all_conflicts(root.paths, -1);
     root.conflicts_num = conflicts.size();
 
+    std::cout << "--ROOT CONFLICTS--" << std::endl;
     for (auto conflict:conflicts){
         root.conflicts.push_back(conflict);
         conflict.print();
@@ -54,6 +55,7 @@ std::vector<Conflict> CBS::get_all_conflicts(const std::vector<simplePath>& path
         {
             for(int j = i+1; j < paths.size(); j++)
             {
+                std::cout << "checking conflicts between agent " << i << " and agent " << j << std::endl;
                 auto conflict = check_paths(paths[i], paths[j]);
                 if(conflict.agent1 >= 0)
                     conflicts.push_back(conflict);
@@ -157,7 +159,7 @@ bool CBS::check_conflict(Move move1, Move move2){
     Vector2D w(B - A);
     double c(w*w - r*r);
     if(c < 0){
-        std::cout << "c < 0, agents will collide<< " << std::endl; 
+        // std::cout << "c < 0, agents will collide<< " << std::endl; 
         return true;
     }
     Vector2D v(VA - VB);
@@ -165,12 +167,12 @@ bool CBS::check_conflict(Move move1, Move move2){
     double b(w*v);
     double dscr(b*b - a*c);
     if(dscr - CN_EPSILON < 0){
-        std::cout << "dscr < 0, agents will not collide" << std::endl;
+        // std::cout << "dscr < 0, agents will not collide" << std::endl;
         return false;
     }
     double ctime = (b - sqrt(dscr))/a;
     if(ctime > -CN_EPSILON && ctime < std::min(endTimeB,endTimeA) - startTimeA + CN_EPSILON){
-        std::cout << "ctime > 0, agents will collide" << std::endl;
+        // std::cout << "ctime > 0, agents will collide" << std::endl;
         return true;
     }
     return false;
@@ -221,9 +223,14 @@ void CBS::find_new_conflicts(const Map& map, const Task& task, CBS_Node& node,
 
     std::cout << "FINDING NEW CONFLICTS FOR AGENT " << path.agentID << std::endl;
     std::list<Conflict> conflictsA({});
+    for(auto c: conflicts)
+        if(c.agent1 != path.agentID && c.agent2 != path.agentID)
+            conflictsA.push_back(c);
     node.conflicts = conflictsA;
-    for(auto n:new_conflicts)
+    for(auto n:new_conflicts){
         node.conflicts.push_back(n);
+        n.print();
+    }
     node.conflicts_num = node.conflicts.size();
     std::cout << "new conflicts on node: " << node.conflicts.size() << std::endl;
     return;
@@ -256,10 +263,15 @@ Solution CBS::solve(const Map& map, const Task& task, const Config& cfg){
     int low_level_expanded(0);
     int id = 2;
     do{
-        auto parent = tree.get_best_node();
+        auto parent = tree.get_front();
+        std::cout << "Popping node: ";
+        parent->print();
+        for(auto c: parent->conflicts)
+        {            
+            c.print();
+        }
         node = *parent;
         node.cost -= node.h;
-        node.print();
         parent->conflicts.clear();
         auto paths = get_paths(&node, task.get_agents_size());
         auto time_now = std::chrono::high_resolution_clock::now();
@@ -272,6 +284,8 @@ Solution CBS::solve(const Map& map, const Task& task, const Config& cfg){
         else{
             conflict = get_conflict(conflicts);
         }
+        std::cout << "Conflicts in this iteration: ";
+        conflict.print();
         time_spent = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - time_now);
         time += time_spent.count();
         expanded++;
@@ -306,6 +320,8 @@ Solution CBS::solve(const Map& map, const Task& task, const Config& cfg){
             time_spent = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - time_now);
             time += time_spent.count();
             if(right_node.cost > 0){
+                std::cout << "----ADDING RIGHT NODE----" << std::endl;
+                right_node.print();
                 tree.add_node(right_node);
             }
         }
@@ -316,6 +332,8 @@ Solution CBS::solve(const Map& map, const Task& task, const Config& cfg){
             time_spent = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - time_now);
             time += time_spent.count();
             if(left_node.cost > 0){
+                std::cout << "----ADDING LEFT NODE----" << std::endl;
+                left_node.print();
                 tree.add_node(left_node);
             }
         }
@@ -365,9 +383,9 @@ std::vector<simplePath> CBS::get_paths(CBS_Node* node, unsigned int agents_size)
         if(paths.at(i).cost < 0)
             paths.at(i) = current->paths.at(i);
     }
-    // std::cout << "paths returned: " << std::endl;
-    // for(auto p : paths){
-    //     p.print();
-    // }
+    std::cout << "paths returned: " << std::endl;
+    for(auto p : paths){
+        p.print();
+    }
     return paths;
 }

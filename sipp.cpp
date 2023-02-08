@@ -217,10 +217,8 @@ Path SIPP::findPath(Agent agent, const Map& map, std::list<Constraint> constrain
     make_constraints(constraints);
     Node start = Node(agent.start_id, 0, 0, agent.start_i, agent.start_j, nullptr, 0, 0); 
     Node goal = Node(agent.goal_id, 0, 0, agent.goal_i, agent.goal_j, nullptr, 0, 0);
-    std::cout << "start: ";
-    start.print();
-    std::cout << "goal: ";
-    goal.print();
+    std::cout << "------------Planning for agent " << agent.id << "------------" << std::endl;
+    agent.print();
     start.f = start.g + h_values.get_value(start.id, agent.id);
     start.parent = nullptr;
     open.push(start);
@@ -243,8 +241,8 @@ Path SIPP::findPath(Agent agent, const Map& map, std::list<Constraint> constrain
             continue;
         v->second.second = true;
         auto parent = &closed.insert({current.id + current.interval_id * map.get_size(), current}).first->second;
-        std::cout << "parent: " << std::endl;
-        parent->print();
+        // std::cout << "parent: " << std::endl;
+        // parent->print();
         if(current.id == goal.id){
             result.nodes = construct_path(current);
             result.cost = current.g;

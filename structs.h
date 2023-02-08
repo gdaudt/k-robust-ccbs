@@ -336,6 +336,12 @@ class CBS_Tree{
             }
             return paths;            
         }
+        CBS_Node* get_front(){
+            open_size--;        
+            auto pointer = open_list.get<0>().begin()->tree_ptr;
+            open_list.get<0>().erase(open_list.get<0>().begin());
+            return pointer;        
+        }
 };
 
 struct Solution{

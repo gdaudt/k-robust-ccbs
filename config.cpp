@@ -1,7 +1,7 @@
 #include "config.h"
 
 Config::Config(){
-    precision = 0.0001;
+    precision = 0.0000001;
     agent_size = 0.353553;
     timelimit = 60;
 }
