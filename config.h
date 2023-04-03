@@ -16,5 +16,6 @@ public:
     double timelimit;
     double connectedness;
     double k_robustness;
+    void print() const;
 };
 

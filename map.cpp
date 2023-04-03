@@ -133,7 +133,18 @@ bool Map::get_grid(const char* FileName){
     std::vector<Step> moves;
     valid_moves.resize(size);
     //moves are generated for a k=3 connected neighborhood
-    moves = {{0,1}, {1,1}, {1,0},  {1,-1},  {0,-1},  {-1,-1}, {-1,0}, {-1,1}};
+    if(connectedness == 2)
+        moves = {{0,1}, {1,0}, {-1,0},  {0,-1}};
+    else if(connectedness == 3)
+        moves = {{0,1}, {1,1}, {1,0},  {1,-1},  {0,-1},  {-1,-1}, {-1,0}, {-1,1}};
+    else if(connectedness == 4)
+        moves = {{0,1}, {1,1}, {1,0},  {1,-1},  {0,-1},  {-1,-1}, {-1,0}, {-1,1},
+                 {1,2}, {2,1}, {2,-1}, {1,-2}, {-1,-2}, {-2,-1}, {-2,1},  {-1,2}};
+    else
+        moves = {{0,1},   {1,1},   {1,0},   {1,-1},  {0,-1},  {-1,-1}, {-1,0}, {-1,1},
+                 {1,2},   {2,1},   {2,-1},  {1,-2},  {-1,-2}, {-2,-1}, {-2,1}, {-1,2},
+                 {1,3},   {2,3},   {3,2},   {3,1},   {3,-1},  {3,-2},  {2,-3}, {1,-3},
+                 {-1,-3}, {-2,-3}, {-3,-2}, {-3,-1}, {-3,1},  {-3,2},  {-2,3}, {-1,3}};    
     //iterate through every move in moves, check if they're valid and if they are, create a new Node object with the move data
     //and add it to the valid_moves vector
     for(int i = 0; i < height; i++){

@@ -26,5 +26,6 @@ class Task{
         }
         std::vector<Agent> get_agents() const { return agents; };
         Agent get_agent (int id) const;
+        int get_agent_start_id(int id) const { return agents[id].start_id; };
         Task();
 };

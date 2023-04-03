@@ -67,8 +67,9 @@ struct Constraint{
     int agent;
     double t1, t2; //prohibited to start moving from (i1,j1) to (i2,j2) between t1 and t2
     int id1, id2;
-    Constraint(int _agent = -1, double _t1 = -1, double _t2 = -1, int _id1 = -1, int _id2 = -1)
-        :agent(_agent), t1(_t1), t2(_t2), id1(_id1), id2(_id2) {};
+    bool k_robust;
+    Constraint(int _agent = -1, double _t1 = -1, double _t2 = -1, int _id1 = -1, int _id2 = -1, bool _k_robust = false)
+        :agent(_agent), t1(_t1), t2(_t2), id1(_id1), id2(_id2), k_robust(_k_robust) {};
     friend std::ostream& operator<<(std::ostream& os, const Constraint& c)
     {
         os << "Constraint: agent: " << c.agent << " t1: " << c.t1 << " t2: " << c.t2 << " id1: " << c.id1 << " id2: " << c.id2 << std::endl;
@@ -79,6 +80,8 @@ struct Constraint{
     void print(){
         std::cout << "Constraint: agent: " << agent << " t1: " << t1 << " t2: " << t2 << " id1: " << id1 << " id2: " << id2 << std::endl;
     }
+
+    bool operator==(const Constraint& rhs) const { return (agent == rhs.agent && t1 == rhs.t1 && t2 == rhs.t2 && id1 == rhs.id1 && id2 == rhs.id2); }
 };
 
 struct simpleNode{
@@ -163,18 +166,49 @@ class Vector2D {
     inline void operator -=(const Vector2D &vec) { i -= vec.i; j -= vec.j; }
 };
 
+class Point {
+public:
+    double i;
+    double j;
+
+    Point(double _i = 0.0, double _j = 0.0):i (_i), j (_j){}
+    Point operator-(Point &p){return Point(i - p.i, j - p.j);}
+    int operator== (Point &p){return (i == p.i) && (j == p.j);}
+    int classify(Point &pO, Point &p1)
+    {
+        Point p2 = *this;
+        Point a = p1 - pO;
+        Point b = p2 - pO;
+        double sa = a.i * b.j - b.i * a.j;
+        if (sa > 0.0)
+            return 1;//LEFT;
+        if (sa < 0.0)
+            return 2;//RIGHT;
+        if ((a.i * b.i < 0.0) || (a.j * b.j < 0.0))
+            return 3;//BEHIND;
+        if ((a.i*a.i + a.j*a.j) < (b.i*b.i + b.j*b.j))
+            return 4;//BEYOND;
+        if (pO == p2)
+            return 5;//ORIGIN;
+        if (p1 == p2)
+            return 6;//DESTINATION;
+        return 7;//BETWEEN;
+    }
+};
+
 struct Conflict{
     int agent1, agent2;
     double time; // when building, time is the min(path1.g, path2.g)
     Move move1, move2; //conflict ocurring from move1 going to move2
     double overcost; // overcost is for the h1 heuristic, which we're not currently using
-    Conflict(int _agent1 = -1, int _agent2 = -1, double _time = CN_INFINITY, Move _move1 = Move(), Move _move2 = Move(), double _overcost = -1)
-        :agent1(_agent1), agent2(_agent2), time(_time), move1(_move1), move2(_move2), overcost(_overcost) {};
+    bool k_robust; // true if the conflict is k_robust
+    Conflict(int _agent1 = -1, int _agent2 = -1, double _time = CN_INFINITY, Move _move1 = Move(), Move _move2 = Move(), double _overcost = -1, bool _k_robust = false)
+        :agent1(_agent1), agent2(_agent2), time(_time), move1(_move1), move2(_move2), overcost(_overcost), k_robust(_k_robust) {};
 
     bool operator < (const Conflict& rhs) const { return this->overcost < rhs.overcost; }
 
     void print(){
-        std::cout << "Conflict: agent1: " << agent1 << " agent2: " << agent2 << " time: " << time << " overcost: " << overcost << std::endl;
+        std::cout << "Conflict: agent1: " << agent1 << " agent2: " << agent2 << " time: " << time << " k_robust: " << k_robust << std::endl;
         move1.print();
         move2.print();
     }
@@ -221,7 +255,11 @@ struct CBS_Node{
     }
 
     void print(){
-        std::cout<<"CBS_Node: id= "<<id<<" cost= "<<cost<<" h= "<<h<<" conflicts_num= "<<conflicts_num<<" total_constraints= "<<total_constraints<<" low_level_expanded= "<<low_level_expanded<<std::endl;
+        std::cout<<"CBS_Node: id= "<<id<<" cost= "<<cost<<" h= "<<h<<" conflicts_num= "<<conflicts_num<<" total_constraints= "<<total_constraints<<" low_level_expanded= "<<low_level_expanded;
+        if(parent != nullptr)
+            std::cout<<" parent_id= "<<parent->id<<std::endl;
+        else
+            std::cout<<" parent_id= "<<-1<<std::endl;
         std::cout<<"paths: "<<std::endl;
         for(auto path : paths){
             path.print();
@@ -230,6 +268,8 @@ struct CBS_Node{
         for(auto conflict : conflicts){
             conflict.print();
         }
+        std::cout << "constraints: " << std::endl;
+        constraint.print();
     }
 };
 
@@ -358,6 +398,11 @@ struct Solution{
     double low_level_expanded;
     std::chrono::duration<double> time;
     std::chrono::duration<double> init_time;
+    std::chrono::duration<double> conflict_time;
+    std::chrono::duration<double> k_conflict_time;
+    std::chrono::duration<double> rt_time;
+    std::chrono::duration<double> low_level_time;
+    std::chrono::duration<double> ct_time;
     std::vector<simplePath> paths;
     Solution(double _flowtime = -1, double _makespan = -1, std::vector<simplePath> _paths = {})
         : flowtime(_flowtime), makespan(_makespan), paths(_paths) { init_cost = -1; constraints_number = 0; low_level_expanded = 0; low_level_expansions = 0; max_constraints = 0;}
@@ -375,6 +420,11 @@ struct Solution{
         std::cout << "Check Time: " << check_time << std::endl;
         std::cout << "Init Time: " << init_time.count() << std::endl;
         std::cout << "Total Time: " << time.count() << std::endl;
+        std::cout << "Conflict Time: " << conflict_time.count() << std::endl;
+        std::cout << "K Conflict Time: " << k_conflict_time.count() << std::endl;
+        std::cout << "RT Time: " << rt_time.count() << std::endl;
+        std::cout << "Low Level Time: " << low_level_time.count() << std::endl;
+        std::cout << "Constraint Time: " << ct_time.count() << std::endl;
     }
 };
 

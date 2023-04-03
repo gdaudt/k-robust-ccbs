@@ -3,6 +3,7 @@
 #include "structs.h"
 #include "map.h"
 #include "heuristic.h"
+#include "reservation_table.h"
 #include <unordered_map>
 #include <map>
 #include <set>
@@ -29,15 +30,18 @@ class SIPP{
     public:
         ~SIPP(){};
         SIPP(){};
-        Path findPath(Agent agent, const Map& map, std::list<Constraint> constraints, Heuristic& h_values);
+        Path findPath(Agent agent, const Map& map, std::list<Constraint> constraints, Heuristic& h_values, ReservationTable& rt);
         Agent agent;
-        void find_successors(Node current, const Map& map, std::vector<Node>& successors, Heuristic& h_values, Node goal);
+        void find_successors(Node current, const Map& map, std::vector<Node>& successors, Heuristic& h_values, Node goal, ReservationTable& rt);
+        void find_successors_sit(Node current, const Map& map, std::vector<Node>& successors, Heuristic& h_values, Node goal, ReservationTable& rt);
         double distance(const Node& a, const Node& b);
         std::vector<Node> construct_path(Node current);
         void make_constraints(std::list<Constraint>& constraints);
+        void make_constraints(std::list<Constraint>& constraints, ReservationTable& rt);
         void clear();
         void add_collision_interval(int id, double begin, double end);
         void add_move_constraint(Move move);   
+        void add_soft_constraint(int id, double begin, double end);
              
         //priority queue for open list, using a node as key and the node's f value as priority, tiebreaking with g value
         std::priority_queue<Node, std::vector<Node>, NodeComparator> open;
@@ -48,6 +52,8 @@ class SIPP{
         std::unordered_map<int, std::vector<std::pair<double, double>>> collision_intervals;
         //stores vectors of constraints associated with moves
         std::map<std::pair<int, int>, std::vector<Move>> constraints;
+        std::unordered_map<int, std::vector<std::pair<double, double> > > soft_constraints;
+        double k_robust;
         Path path;       
         
         void print_constraints(){
@@ -60,6 +66,20 @@ class SIPP{
                 std::cout << "Key: nodeid1: " << c.first.first << ", nodeid2: " << c.first.second << std::endl;
                 for(auto m:c.second){
                     m.print();
+                }
+            }
+        }
+
+        void print_soft_constraints(){
+            if(soft_constraints.size() == 0){
+                std::cout << "No soft constraints" << std::endl;
+                return;
+            }
+            std::cout << "Soft Constraints: " << std::endl;
+            for(auto c:soft_constraints){
+                std::cout << "Key: " << c.first << std::endl;
+                for(auto m:c.second){
+                    std::cout << "Interval: " << m.first << ", " << m.second << std::endl;
                 }
             }
         }

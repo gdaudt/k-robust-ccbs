@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/k-robust-ccbs.dir/heuristic.cpp.o"
   "CMakeFiles/k-robust-ccbs.dir/main.cpp.o"
   "CMakeFiles/k-robust-ccbs.dir/map.cpp.o"
+  "CMakeFiles/k-robust-ccbs.dir/reservation_table.cpp.o"
   "CMakeFiles/k-robust-ccbs.dir/sipp.cpp.o"
   "CMakeFiles/k-robust-ccbs.dir/task.cpp.o"
   "CMakeFiles/k-robust-ccbs.dir/tinyxml2.cpp.o"

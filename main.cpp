@@ -10,17 +10,18 @@
 
 int main(int argc, const char *argv[])
 {        
-    Map map = Map(0.353553);
+    Config config = Config();
+    if(argc > 2){        
+        config.get_config(argv[3]);
+    }    
+    Map map = Map(config.agent_size, config.connectedness);
     map.get_map(argv[1]);
     map.print();
     Task task;
     task.get_task(argv[2]);
     task.make_ids(map.get_width());
     task.print_task();
-    Config config = Config();
-    if(argc > 2){        
-        config.get_config(argv[3]);
-    }    
+    config.print();
     // Heuristic h;
     // auto agents = task.get_agents();    
     // h.init(map.get_size(), agents.size());
@@ -36,8 +37,13 @@ int main(int argc, const char *argv[])
     //     Path path = sipp.findPath(agent, map, constraints, h);
     //  //   path.print();
     // }
-    CBS cbs;
-    auto s = cbs.solve(map, task, Config());
-    s.print();
+    CBS cbs(map, config);
+    auto solution = cbs.solve(map, task, config);
+    solution.print();
+    XML_logger logger;
+    logger.get_log(argv[2]);
+    logger.write_to_log_summary(solution);
+    logger.write_to_log_path(solution, map);
+    logger.save_log();
     return 0;
 }

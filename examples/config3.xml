@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<root>
+	<algorithm>		
+		<agent_size>0.353553</agent_size>
+		<timelimit>10</timelimit>
+		<precision>0.0000001</precision>
+		<k_robustness>3.0</k_robustness>
+		<connectedness>3</connectedness>
+	</algorithm>
+</root>

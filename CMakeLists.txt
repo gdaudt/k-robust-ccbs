@@ -24,7 +24,8 @@ set( SOURCE_FILES
     task.cpp
     heuristic.cpp
     sipp.cpp
-    cbs.cpp)
+    cbs.cpp
+    reservation_table.cpp)
 
 #set only the header files
 set( HEADER_FILES
@@ -37,6 +38,7 @@ set( HEADER_FILES
     task.h
     heuristic.h
     sipp.h
-    cbs.h)
+    cbs.h
+    reservation_table.h)
 # End of CMakeLists.Txt file. Save it as a plain text file and the name should be exactly CMakeLists.Txt
 add_executable( k-robust-ccbs ${SOURCE_FILES} ${HEADER_FILES} )

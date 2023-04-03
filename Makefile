@@ -258,6 +258,33 @@ map.cpp.s:
 	$(MAKE) -f CMakeFiles/k-robust-ccbs.dir/build.make CMakeFiles/k-robust-ccbs.dir/map.cpp.s
 .PHONY : map.cpp.s
 
+reservation_table.o: reservation_table.cpp.o
+
+.PHONY : reservation_table.o
+
+# target to build an object file
+reservation_table.cpp.o:
+	$(MAKE) -f CMakeFiles/k-robust-ccbs.dir/build.make CMakeFiles/k-robust-ccbs.dir/reservation_table.cpp.o
+.PHONY : reservation_table.cpp.o
+
+reservation_table.i: reservation_table.cpp.i
+
+.PHONY : reservation_table.i
+
+# target to preprocess a source file
+reservation_table.cpp.i:
+	$(MAKE) -f CMakeFiles/k-robust-ccbs.dir/build.make CMakeFiles/k-robust-ccbs.dir/reservation_table.cpp.i
+.PHONY : reservation_table.cpp.i
+
+reservation_table.s: reservation_table.cpp.s
+
+.PHONY : reservation_table.s
+
+# target to generate assembly for a file
+reservation_table.cpp.s:
+	$(MAKE) -f CMakeFiles/k-robust-ccbs.dir/build.make CMakeFiles/k-robust-ccbs.dir/reservation_table.cpp.s
+.PHONY : reservation_table.cpp.s
+
 sipp.o: sipp.cpp.o
 
 .PHONY : sipp.o
@@ -390,6 +417,9 @@ help:
 	@echo "... map.o"
 	@echo "... map.i"
 	@echo "... map.s"
+	@echo "... reservation_table.o"
+	@echo "... reservation_table.i"
+	@echo "... reservation_table.s"
 	@echo "... sipp.o"
 	@echo "... sipp.i"
 	@echo "... sipp.s"

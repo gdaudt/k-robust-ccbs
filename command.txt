@@ -1,0 +1,1 @@
+./k-robust-ccbs examples/grid_map.xml examples/grid_task.xml examples/config.xml >> output.txt

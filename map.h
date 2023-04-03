@@ -17,12 +17,12 @@ private:
     std::vector<std::vector<int>> grid;
     std::vector<std::vector<Node>> valid_moves; 
     int height, width, size;
-    int  connectedness = 3;
+    int  connectedness;
     double agent_size;    
     bool cell_is_obstacle(int i, int j) const;
 
 public:
-    Map(double size){ agent_size = size;}
+    Map(double size, int k){ agent_size = size; connectedness = k; };
     bool get_map(const char* FileName);
     bool get_grid(const char* FileName);
     int get_size() const { return size; };
